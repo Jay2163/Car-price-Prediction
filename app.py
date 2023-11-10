@@ -27,7 +27,7 @@ def predict():
     final_input = np.array(data).reshape(1,-1)
     print(final_input)
     output = model.predict(final_input)
-    return render_template("home.html",prediction_text="The Car Price Prediction is {}".format(round(output[0],2)))
+    return render_template("home.html",prediction_text="The Car Price Prediction is $ {}".format(round(output[0],2)))
 
 
 if __name__ == "__main__":
